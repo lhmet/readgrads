@@ -1,9 +1,8 @@
-#' Plots a list of SpatialGrid/PixelDataFrames using ggplot
+#' Reads a list of grads files into a data.frame
 #' 
-#' Test 1
+#' Reads a list of grads files into a data.frame
 #' 
-#' @param a b
-#' @return something
+#' @note This function is not yet implemented
 #' @author Paul Hiemstra, \email{p.h.hiemstra@@gmail.com}
 #' @export
 #' @examples

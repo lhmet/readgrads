@@ -9,9 +9,13 @@
 #' @export
 #' @examples
 #' 
-#' print("Hello World")
-#' 
-#' 
+#' \dontrun{
+#' # In pseudo code
+#' ctlparams = parseCTLfile("/where/is/your/somefile.ctl")
+#' # Read a pre parsed example
+#' data(ctlparams)
+#' ctlparams
+#' }
 parseCTLfile <-
 function(ctlfname) {
   content = readLines(ctlfname)
@@ -23,7 +27,7 @@ function(ctlfname) {
   # Get all the parameters one by one
   ctlparams = append(ctlparams, .readSimpleParam(content, "dset"))
   ctlparams = append(ctlparams, .readSimpleParam(content, "undef", toNumeric = TRUE))
-  ctlparams = append(ctlparams, .readSimpleParam(content, "options"))
+#   ctlparams = append(ctlparams, .readSimpleParam(content, "options"))
   ctlparams = append(ctlparams, .readSimpleParam(content, "title"))
   ctlparams = append(ctlparams, .readCoordinateParam(content, "xdef"))
   ctlparams = append(ctlparams, .readCoordinateParam(content, "ydef"))

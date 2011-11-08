@@ -15,7 +15,13 @@
   other readGrads functions to use.
 }
 \examples{
-print("Hello World")
+\dontrun{
+# In pseudo code
+ctlparams = parseCTLfile("/where/is/your/somefile.ctl")
+# Read a pre parsed example
+data(ctlparams)
+ctlparams
+}
 }
 \author{
   Paul Hiemstra, \email{p.h.hiemstra@gmail.com}

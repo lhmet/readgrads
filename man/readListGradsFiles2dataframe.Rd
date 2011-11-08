@@ -1,18 +1,15 @@
 \name{readListGradsFiles2dataframe}
 \alias{readListGradsFiles2dataframe}
-\title{Plots a list of SpatialGrid/PixelDataFrames using ggplot}
+\title{Reads a list of grads files into a data.frame}
 \usage{
   readListGradsFiles2dataframe(filelist, ts, lev, var,
   verbose)
 }
-\arguments{
-  \item{a}{b}
-}
-\value{
-  something
-}
 \description{
-  Test 1
+  Reads a list of grads files into a data.frame
+}
+\note{
+  This function is not yet implemented
 }
 \examples{
 print("Hello World")

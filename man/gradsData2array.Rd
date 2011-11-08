@@ -1,20 +1,37 @@
 \name{gradsData2array}
 \alias{gradsData2array}
-\title{Plots a list of SpatialGrid/PixelDataFrames using ggplot}
+\title{Dumps subsets of grads data into a data.frame}
 \usage{
   gradsData2array(ts, lev, var, gradsData, ctlparams)
 }
 \arguments{
-  \item{a}{b}
+  \item{ts}{numeric vector giving the timesteps which are
+  to be included, e.g. 1:100.}
+
+  \item{lev}{numeric vector expressing which levels are to
+  be included, e.g. lev = c(200, 500).}
+
+  \item{var}{character vector expressing which variable(s)
+  are to be included, e.g. var = "psi". Note that there is
+  currently no support for converting more than one var at
+  a time.}
 }
 \value{
-  something
+  a multi-dimensional array with the requested subset.
 }
 \description{
-  Test 1
+  This funcion takes the output of
+  \code{\link{readGradsFile}} and converts it to an array.
+  The function allows the user to take subsets in terms of
+  timesteps, variables and levels.
 }
 \examples{
-print("Hello World")
+data(ctlparams)
+data(gradsExampleData)
+
+dat1 = gradsData2array(1, 500, "u", gradsExampleData, ctlparams)
+dat2 = gradsData2array(1:2, 200, c("u"), gradsExampleData, ctlparams)
+dat3 = gradsData2array(1:2, 800, "psi", gradsExampleData, ctlparams)
 }
 \author{
   Paul Hiemstra, \email{p.h.hiemstra@gmail.com}

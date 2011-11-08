@@ -7,6 +7,9 @@ LazyLoad: yes
 Author: Paul Hiemstra
 Description: More about what it does (maybe more than one
     line)
+Depends:
+    reshape,
+    plyr
 Version: 1.0
 Date: 2011-11-08
 Collate:

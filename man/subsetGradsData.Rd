@@ -1,21 +1,36 @@
 \name{subsetGradsData}
 \alias{subsetGradsData}
-\title{Plots a list of SpatialGrid/PixelDataFrames using ggplot}
+\title{Dumps subsets of grads data into a data.frame}
 \usage{
   subsetGradsData(ts, lev, var, gradsData, ctlparams,
   correctionFactor = 1)
 }
 \arguments{
-  \item{a}{b}
+  \item{ts}{numeric vector giving the timesteps which are
+  to be included, e.g. 1:100.}
+
+  \item{lev}{numeric vector expressing which levels are to
+  be included, e.g. lev = c(200, 500).}
+
+  \item{var}{character vector expressing which variable(s)
+  are to be included, e.g. var = "psi".}
 }
 \value{
   something
 }
 \description{
-  Test 1
+  This funcion takes the output of
+  \code{\link{readGradsFile}} and converts it to a
+  data.frame. The function allows the user to take subsets
+  in terms of timesteps, variables and levels.
 }
 \examples{
-print("Hello World")
+data(ctlparams)
+data(gradsExampleData)
+
+dat1 = subsetGradsData(1, 500, "u", gradsExampleData, ctlparams)
+dat2 = subsetGradsData(1:2, 200, c("u","v"), gradsExampleData, ctlparams)
+dat3 = subsetGradsData(1:2, 800, "psi", gradsExampleData, ctlparams)
 }
 \author{
   Paul Hiemstra, \email{p.h.hiemstra@gmail.com}
