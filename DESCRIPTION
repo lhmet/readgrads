@@ -1,0 +1,10 @@
+Package: readGrads
+Type: Package
+Title: An R package to read and manipulate grads data
+Version: 1.0
+Date: 2011-11-08
+Author: Paul Hiemstra
+Maintainer: Paul Hiemstra <p.h.hiemstra@gmail.com>
+Description: More about what it does (maybe more than one line)
+License: GPL v2
+LazyLoad: yes
