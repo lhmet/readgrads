@@ -1,3 +1,17 @@
+#' Parses a grads .ctl file into an R list
+#' 
+#' Parses the information in a .ctl file into an R list for
+#' other readGrads functions to use.  
+#' 
+#' @param ctlfname path where the .ctl file is located
+#' @return R list containing the parsed parameters.
+#' @author Paul Hiemstra, \email{p.h.hiemstra@@gmail.com}
+#' @export
+#' @examples
+#' 
+#' print("Hello World")
+#' 
+#' 
 parseCTLfile <-
 function(ctlfname) {
   content = readLines(ctlfname)

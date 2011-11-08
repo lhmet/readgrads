@@ -1,3 +1,16 @@
+#' Plots a list of SpatialGrid/PixelDataFrames using ggplot
+#' 
+#' Test 1
+#' 
+#' @param a b
+#' @return something
+#' @author Paul Hiemstra, \email{p.h.hiemstra@@gmail.com}
+#' @export
+#' @examples
+#' 
+#' print("Hello World")
+#' 
+#' 
 readGradsFile <-
 function(gradsfile, ctlparams, tstepRange, convert2dataframe = FALSE, padding.bytes = TRUE) {
   if(missing(ctlparams)) ctlparams = parseCTLfile(sub(".grads", ".ctl", gradsfile))

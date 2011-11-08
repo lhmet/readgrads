@@ -1,3 +1,16 @@
+#' Plots a list of SpatialGrid/PixelDataFrames using ggplot
+#' 
+#' Test 1
+#' 
+#' @param a b
+#' @return something
+#' @author Paul Hiemstra, \email{p.h.hiemstra@@gmail.com}
+#' @export
+#' @examples
+#' 
+#' print("Hello World")
+#' 
+#' 
 subsetGradsData <-
 function(ts, lev, var, gradsData, ctlparams, correctionFactor = 1) {
   gridsize = ctlparams$xdef$noLevels * ctlparams$ydef$noLevels

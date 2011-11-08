@@ -1,10 +1,20 @@
 Package: readGrads
-Type: Package
+Maintainer: Paul Hiemstra <p.h.hiemstra@gmail.com>
+License: GPL v2
 Title: An R package to read and manipulate grads data
+Type: Package
+LazyLoad: yes
+Author: Paul Hiemstra
+Description: More about what it does (maybe more than one
+    line)
 Version: 1.0
 Date: 2011-11-08
-Author: Paul Hiemstra
-Maintainer: Paul Hiemstra <p.h.hiemstra@gmail.com>
-Description: More about what it does (maybe more than one line)
-License: GPL v2
-LazyLoad: yes
+Collate:
+    'gradsData2array.R'
+    'parseCTLfile.R'
+    'readGradsFile.R'
+    'readGrads-internal.R'
+    'readGrads-package.R'
+    'readListGradsFiles2array.R'
+    'readListGradsFiles2dataframe.R'
+    'subsetGradsData.R'
