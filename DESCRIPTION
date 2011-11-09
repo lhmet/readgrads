@@ -1,6 +1,6 @@
 Package: readGrads
 Maintainer: Paul Hiemstra <p.h.hiemstra@gmail.com>
-License: GPL v2
+License: GPL
 Title: An R package to read and manipulate grads data
 Type: Package
 LazyLoad: yes

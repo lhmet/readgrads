@@ -22,3 +22,31 @@
 #' @examples
 #' print("Hello World")
 NA
+
+#' Example of a parsed .ctl file
+#'
+#' This dataset shows the result of the function \code{\link{parseCTLfile}},
+#' and is used in this package as an example dataset.
+#'
+#'
+#' @name ctlparams
+#' @aliases ctlparams
+#' @docType data
+#' @title Example of a parsed .ctl file
+#' @author Paul Hiemstra, \email{p.h.hiemstra@@gmail.com}
+#' @keywords data
+NA
+
+#' Example of a grads dataset
+#'
+#' This dataset shows the result of the function \code{\link{readGradsFile}},
+#' and is used in this package as an example dataset.
+#'
+#'
+#' @name gradsExampleData
+#' @aliases gradsExampleData
+#' @docType data
+#' @title Example of a grads dataset
+#' @author Paul Hiemstra, \email{p.h.hiemstra@@gmail.com}
+#' @keywords data
+NA

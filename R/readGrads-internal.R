@@ -32,9 +32,10 @@ function(ctlparams) {
 
 .mapGradsDataIndexToMetadata <-
 function(ts, lev, var, ctlparams) {
+  tstep =0; variable=0; level=0 # This line is present to avoid a 'note' when running R CMD check
   gradsIndex2metadata = data.frame(tstep = rep(1:ctlparams$tdef, each = ctlparams$zdef$noLevels * ctlparams$vars),
-             variable = rep(names(ctlparams$variables), each = ctlparams$zdef$noLevels, times = ctlparams$tdef),
-             level = rep(ctlparams$zdef$levelValues, times = ctlparams$vars * ctlparams$tdef))
+                                   variable = rep(names(ctlparams$variables), each = ctlparams$zdef$noLevels, times = ctlparams$tdef),
+                                   level = rep(ctlparams$zdef$levelValues, times = ctlparams$vars * ctlparams$tdef))
   subsetMetadata = subset(gradsIndex2metadata, tstep %in% ts & variable %in% var & level %in% lev )
   indicies = as.numeric(rownames(subsetMetadata))
   return(list(indicies = indicies, metadata = subsetMetadata))
