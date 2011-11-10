@@ -10,7 +10,7 @@ Description: More about what it does (maybe more than one
 Depends:
     reshape,
     plyr
-Version: 1.0
+Version: 1.0-2
 Date: 2011-11-08
 Collate:
     'gradsData2array.R'
