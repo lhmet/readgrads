@@ -17,6 +17,8 @@
 #'                   The default is FALSE.
 #' @param padding.bytes logical, whether or not in the binary file additional bytes are used between the 
 #'                   maps. Default is TRUE.
+#' @param ... additional parameters which are passed on to \code{\link{readBin}}. See the documentation of \code{\link{readBin}}
+#'                   for which parameters can be passed. 
 #' @return A list with maps containing floats for each map, or if \code{convert2dataframe} equals TRUE, a data.frame.
 #' @seealso \code{\link{subsetGradsData}}, \code{\link{gradsData2array}}
 #' @author Paul Hiemstra, \email{p.h.hiemstra@@gmail.com}
@@ -31,7 +33,7 @@
 #' gradsExampleData
 #' }
 readGradsFile <-
-function(gradsfile, ctlparams, tstepRange, convert2dataframe = FALSE, padding.bytes = TRUE) {
+function(gradsfile, ctlparams, tstepRange, convert2dataframe = FALSE, padding.bytes = TRUE, ...) {
   if(missing(ctlparams)) ctlparams = parseCTLfile(sub(".grads", ".ctl", gradsfile))
   if(missing(tstepRange)) tstepRange = 1:ctlparams$tdef
   gridsize = ctlparams$xdef$noLevels * ctlparams$ydef$noLevels
@@ -54,9 +56,9 @@ function(gradsfile, ctlparams, tstepRange, convert2dataframe = FALSE, padding.by
   # Reading data
   remainingMapsToRead = length(tstepRange) * ctlparams$vars * ctlparams$zdef$noLevels
   gradsData = lapply(1:remainingMapsToRead, function(x) {
-    if(padding.bytes) null = readBin(zz, numeric(), 1, size = 4) # Skip fortran delimiters
-    bla = data.frame(value = readBin(zz, numeric(), gridsize, size = 4))
-    if(padding.bytes) null = readBin(zz, numeric(), 1, size = 4) # Skip fortran delimiters
+    if(padding.bytes) null = readBin(zz, numeric(), 1, size = 4, ...) # Skip fortran delimiters
+    bla = data.frame(value = readBin(zz, numeric(), gridsize, size = 4, ...))
+    if(padding.bytes) null = readBin(zz, numeric(), 1, size = 4, ...) # Skip fortran delimiters
     return(bla)
   })
 

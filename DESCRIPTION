@@ -5,19 +5,11 @@ Title: An R package to read and manipulate grads data
 Type: Package
 LazyLoad: yes
 Author: Paul Hiemstra
-Description: More about what it does (maybe more than one
-    line)
-Depends:
-    reshape,
-    plyr
-Version: 1.0-2
-Date: 2011-11-08
-Collate:
-    'gradsData2array.R'
-    'parseCTLfile.R'
-    'readGradsFile.R'
-    'readGrads-internal.R'
-    'readGrads-package.R'
-    'readListGradsFiles2array.R'
-    'readListGradsFiles2dataframe.R'
+Description: More about what it does (maybe more than one line)
+Version: 1.0-3
+Depends: reshape, plyr
+Date: 2012-01-25
+Collate: 'gradsData2array.R' 'parseCTLfile.R' 'readGradsFile.R'
+    'readGrads-internal.R' 'readGrads-package.R'
+    'readListGradsFiles2array.R' 'readListGradsFiles2dataframe.R'
     'subsetGradsData.R'
