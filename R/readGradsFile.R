@@ -17,6 +17,7 @@
 #'                   The default is FALSE.
 #' @param padding.bytes logical, whether or not in the binary file additional bytes are used between the 
 #'                   maps. Default is TRUE.
+#' @param file.ext charater, default is .gra
 #' @param ... additional parameters which are passed on to \code{\link{readBin}}. See the documentation of \code{\link{readBin}}
 #'                   for which parameters can be passed. 
 #' @return A list with maps containing floats for each map, or if \code{convert2dataframe} equals TRUE, a data.frame.
@@ -34,7 +35,7 @@
 #' }
 readGradsFile <-
 function(gradsfile, ctlparams, tstepRange, convert2dataframe = FALSE, padding.bytes = TRUE, 
-         file.ext = ".bin", ...) {
+         file.ext = ".gra", ...) {
   if(missing(ctlparams)) ctlparams = parseCTLfile(sub(file.ext, ".ctl", gradsfile))
   if(missing(tstepRange)) tstepRange = 1:ctlparams$tdef
   gridsize = ctlparams$xdef$noLevels * ctlparams$ydef$noLevels
