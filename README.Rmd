@@ -1,0 +1,60 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# readgrads
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of readgrads is to provide functions to read and manipulate binay data files from the Grid Analysis and Display System ([GrADS](http://cola.gmu.edu/grads/)).
+
+## Installation
+
+You can install the development version of readgrads from [GitHub](https://github.com/) with:
+
+
+``` r
+# install.packages("devtools")
+devtools::install_github("lhmet/readgrads")
+```
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(readgrads)
+## basic example code
+data_tmp <- tempfile(fileext = ".bin")
+download.file(
+  "http://ftp.cptec.inpe.br/modelos/io/produtos/MERGE/2019/prec_20191201.bin",
+  data_tmp
+)
+ctl_tmp <- file.path(dirname(data_tmp), gsub(".bin", ".ctl", basename(data_tmp)))
+download.file(
+  "http://ftp.cptec.inpe.br/modelos/io/produtos/MERGE/2019/prec_20191201.ctl",
+  ctl_tmp
+)
+x <- readGradsFile(
+  data_tmp,
+  file.ext = ".bin",
+  convert2dataframe = TRUE,
+  varname = "prec"
+)
+head(x)
+```
+
+
+
+
