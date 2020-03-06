@@ -33,8 +33,9 @@
 #' gradsExampleData
 #' }
 readGradsFile <-
-function(gradsfile, ctlparams, tstepRange, convert2dataframe = FALSE, padding.bytes = TRUE, ...) {
-  if(missing(ctlparams)) ctlparams = parseCTLfile(sub(".grads", ".ctl", gradsfile))
+function(gradsfile, ctlparams, tstepRange, convert2dataframe = FALSE, padding.bytes = TRUE, 
+         file.ext = ".bin", ...) {
+  if(missing(ctlparams)) ctlparams = parseCTLfile(sub(file.ext, ".ctl", gradsfile))
   if(missing(tstepRange)) tstepRange = 1:ctlparams$tdef
   gridsize = ctlparams$xdef$noLevels * ctlparams$ydef$noLevels
 
