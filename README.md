@@ -13,9 +13,12 @@ binay data files from the Grid Analysis and Display System
 
 This repo is a fork of
 <https://bitbucket.org/paulhiemstra/readgrads/src/default/> from Paul
-Hiemstra. The main changes made were to:
+Hiemstra.
 
-  - obtain data in a `data.frame` including dates.
+The main changes made were to:
+
+  - obtain data in a `data.frame` including dates. This improvement was
+    made using the gridt.r script by Marcos Longo (@mpaiao)
 
   - allow importing binary files with specified extension (‘.gra’,
     ‘.bin’) (parameter `file.ext` in the `readGradsFile()` function)
