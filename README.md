@@ -11,6 +11,18 @@ The goal of readgrads is to provide functions to read and manipulate
 binay data files from the Grid Analysis and Display System
 ([GrADS](http://cola.gmu.edu/grads/)).
 
+This repo is a fork of
+<https://bitbucket.org/paulhiemstra/readgrads/src/default/> from Paul
+Hiemstra. The main changes made were to:
+
+  - obtain data in a `data.frame` including dates.
+
+  - allow importing binary files with specified extension (‘.gra’,
+    ‘.bin’) (parameter `file.ext` in the `readGradsFile()` function)
+
+  - specify the variables of interest in a new argument (varname in the
+    `readGradsFile()` function)
+
 ## Installation
 
 You can install the development version of readgrads from
@@ -23,7 +35,7 @@ devtools::install_github("lhmet/readgrads")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to use readgrads.
 
 ``` r
 library(readgrads)
