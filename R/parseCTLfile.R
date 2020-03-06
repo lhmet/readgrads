@@ -18,6 +18,7 @@
 #' }
 parseCTLfile <-
 function(ctlfname) {
+  # ctlfname = ctl_tmp
   content = readLines(ctlfname)
   content = .stripLeadingWhiteSpaces(content)
   content = .convertToLower(content)
@@ -35,7 +36,11 @@ function(ctlfname) {
   ctlparams = append(ctlparams, .readSimpleParam(content, "tdef", skipFinal = 3, toNumeric = TRUE))
   ctlparams = append(ctlparams, .readSimpleParam(content, "vars", toNumeric = TRUE))
   ctlparams = append(ctlparams, .readVariablesParam(content, ctlparams$vars))  
+  ctlparams = append(ctlparams, .readSimpleParamDateTime(content))
 
   return(ctlparams)
 }
+
+
+
 

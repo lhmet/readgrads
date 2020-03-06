@@ -12,4 +12,4 @@ Date: 2012-01-25
 Collate: 'gradsData2array.R' 'parseCTLfile.R' 'readGradsFile.R'
     'readGrads-internal.R' 'readGrads-package.R'
     'readListGradsFiles2array.R' 'readListGradsFiles2dataframe.R'
-    'subsetGradsData.R'
+    'subsetGradsData.R' 'gridt.R'
