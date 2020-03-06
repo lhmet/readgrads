@@ -13,3 +13,4 @@ Collate: 'gradsData2array.R' 'parseCTLfile.R' 'readGradsFile.R'
     'readGrads-internal.R' 'readGrads-package.R'
     'readListGradsFiles2array.R' 'readListGradsFiles2dataframe.R'
     'subsetGradsData.R' 'gridt.R'
+RoxygenNote: 7.0.2
