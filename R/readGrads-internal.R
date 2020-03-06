@@ -212,6 +212,15 @@ function(cont, param) {
   return(out)
 }
 
+.readSimpleParamDateTime <- function(cont){
+  # cont = content
+  tdef_split <- unlist(strsplit(.findLineForParam(cont, "tdef", value = TRUE), " "))
+  tdef_split <- tdef_split[tdef_split!=""]
+  out <- list(gridt(ntimes = as.integer(tdef_split[2]), time0 = tdef_split[4], dtime = tdef_split[5]))
+  names(out) <- 'gtime'
+  return(out)
+}
+
 .readSimpleParam <-
 function(cont, param, toNumeric = FALSE, skipFinal = 0) {
   if(toNumeric) {
