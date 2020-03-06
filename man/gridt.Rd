@@ -16,7 +16,7 @@ gridt(ntimes, time0, dtime, century = 2000)
 \item{century}{numeric, default is 2000}
 }
 \value{
-
+character
 }
 \description{
 Extract date and time information from content of ctl file

@@ -6,13 +6,11 @@
 #' @param dtime character
 #' @param century numeric, default is 2000
 #'
-#' @return
-#' @export
+#' @return character
 #' @author Marcos Longo
-#'
-#' @examples
+
 gridt <- function(ntimes, time0, dtime, century = 2000) {
-  #----- Finding position of each part ------------------------------------------------------#
+  # Finding position of each part 
   time0 <- tolower(time0)
   colon <- regexpr(":", time0)[1]
   mmms <- c("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec")

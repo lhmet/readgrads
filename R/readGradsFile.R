@@ -26,15 +26,13 @@
 #' @author Paul Hiemstra, \email{p.h.hiemstra@@gmail.com}
 #' @export
 #' @examples
-#'
 #' \dontrun{
 #' # In pseudocode:
 #' dat <- readGradsFile("/where/is/your/gradsfile.grads")
 #' # Load an example file
 #' data(gradsExampleData)
 #' gradsExampleData
-#' }
-#' \dontrun{
+#'
 #' data_tmp <- tempfile(fileext = '.bin')
 #' download.file(
 #' "http://ftp.cptec.inpe.br/modelos/io/produtos/MERGE/2020/prec_20200101.bin",

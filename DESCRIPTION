@@ -1,16 +1,24 @@
 Package: readGrads
-Maintainer: Paul Hiemstra <p.h.hiemstra@gmail.com>
 License: GPL
 Title: An R package to read and manipulate grads data
 Type: Package
 LazyLoad: yes
-Author: Paul Hiemstra
-Description: More about what it does (maybe more than one line)
+Description: An adapted version of readgrads package by Paul Hiemstra avaiable at https://bitbucket.org/paulhiemstra/readgrads/src/default/.
 Version: 1.0-3
-Depends: reshape, plyr
+Depends: 
+    reshape (>= 0.8.8)
 Date: 2012-01-25
-Collate: 'gradsData2array.R' 'parseCTLfile.R' 'readGradsFile.R'
-    'readGrads-internal.R' 'readGrads-package.R'
-    'readListGradsFiles2array.R' 'readListGradsFiles2dataframe.R'
-    'subsetGradsData.R' 'gridt.R'
 RoxygenNote: 7.0.2
+URL: https://github.com/lhmet/readgrads
+Authors@R: 
+    c(person(family = "lhmet",
+             role = "ctb",
+             email = "lhmet@ufsm.br"),
+      person(given = "Jonatan",
+             family = "Tatsch",
+             role = "ctb",
+             email = "jdtatsch@gmail.com"),
+      person(given = "Paul",
+             family = "Hiemstra",
+             role = "cre",
+             email = "p.h.hiemstra@gmail.com"))
