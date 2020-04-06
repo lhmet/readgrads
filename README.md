@@ -54,18 +54,39 @@ download.file(
   "http://ftp.cptec.inpe.br/modelos/io/produtos/MERGE/2019/prec_20191201.ctl",
   ctl_tmp
 )
-x <- readGradsFile(
+```
+
+``` r
+
+n_stations <- readGradsFile(
   data_tmp,
   file.ext = ".bin",
   convert2dataframe = TRUE,
-  varname = "prec"
+  varname = "nest", 
+  padding.bytes = FALSE
 )
-head(x)
-#>         x     y    prec index tstep variable level                date
-#> 1   -82.8 -50.2 14.6460     1     1     prec     1 2019-12-01 12:00:00
-#> 1.1 -82.6 -50.2 14.2860     1     1     prec     1 2019-12-01 12:00:00
-#> 1.2 -82.4 -50.2 14.1066     1     1     prec     1 2019-12-01 12:00:00
-#> 1.3 -82.2 -50.2 14.1030     1     1     prec     1 2019-12-01 12:00:00
-#> 1.4 -82.0 -50.2 14.5611     1     1     prec     1 2019-12-01 12:00:00
-#> 1.5 -81.8 -50.2 15.4341     1     1     prec     1 2019-12-01 12:00:00
+head(n_stations)
+#>         x     y nest index tstep variable level                date
+#> 2   -82.8 -50.2 -999     2     1     nest     1 2019-12-01 12:00:00
+#> 2.1 -82.6 -50.2 -999     2     1     nest     1 2019-12-01 12:00:00
+#> 2.2 -82.4 -50.2 -999     2     1     nest     1 2019-12-01 12:00:00
+#> 2.3 -82.2 -50.2 -999     2     1     nest     1 2019-12-01 12:00:00
+#> 2.4 -82.0 -50.2 -999     2     1     nest     1 2019-12-01 12:00:00
+#> 2.5 -81.8 -50.2 -999     2     1     nest     1 2019-12-01 12:00:00
+
+all_vars <- readGradsFile(
+  data_tmp,
+  file.ext = ".bin",
+  convert2dataframe = TRUE,
+  #varname = "nest", 
+  padding.bytes = FALSE
+)
+head(all_vars)
+#>         x     y   value index tstep variable level                date
+#> 1   -82.8 -50.2 15.6150     1     1     prec     1 2019-12-01 12:00:00
+#> 1.1 -82.6 -50.2 14.6460     1     1     prec     1 2019-12-01 12:00:00
+#> 1.2 -82.4 -50.2 14.2860     1     1     prec     1 2019-12-01 12:00:00
+#> 1.3 -82.2 -50.2 14.1066     1     1     prec     1 2019-12-01 12:00:00
+#> 1.4 -82.0 -50.2 14.1030     1     1     prec     1 2019-12-01 12:00:00
+#> 1.5 -81.8 -50.2 14.5611     1     1     prec     1 2019-12-01 12:00:00
 ```

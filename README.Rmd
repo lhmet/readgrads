@@ -57,15 +57,28 @@ download.file(
   "http://ftp.cptec.inpe.br/modelos/io/produtos/MERGE/2019/prec_20191201.ctl",
   ctl_tmp
 )
-x <- readGradsFile(
-  data_tmp,
-  file.ext = ".bin",
-  convert2dataframe = TRUE,
-  varname = "prec"
-)
-head(x)
 ```
 
 
+```{r}
+
+n_stations <- readGradsFile(
+  data_tmp,
+  file.ext = ".bin",
+  convert2dataframe = TRUE,
+  varname = "nest", 
+  padding.bytes = FALSE
+)
+head(n_stations)
+
+all_vars <- readGradsFile(
+  data_tmp,
+  file.ext = ".bin",
+  convert2dataframe = TRUE,
+  #varname = "nest", 
+  padding.bytes = FALSE
+)
+head(all_vars)
+```
 
 
