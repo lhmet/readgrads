@@ -38,7 +38,7 @@
 #' "http://ftp.cptec.inpe.br/modelos/io/produtos/MERGE/2020/prec_20200101.bin",
 #'  data_tmp
 #'  )
-#'  ctl_tmp <- file.path(dirname(data_tmp), gsub('.bin', ',ctl', basename(data_tmp)))
+#'  ctl_tmp <- file.path(dirname(data_tmp), gsub('.bin', '.ctl', basename(data_tmp)))
 #' download.file(
 #' "http://ftp.cptec.inpe.br/modelos/io/produtos/MERGE/2020/prec_20200101.ctl",
 #'  ctl_tmp
